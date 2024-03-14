@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 
-app = Flask(__name__)
+app = Flask(nicole_http)
 
 @app.route('/get_endpoint', methods=['GET'])
 def get_endpoint():
@@ -25,5 +25,5 @@ def not_found():
 def internal_error():
     return jsonify(message='Erro interno de servidor, culpa da aws'), 500
 
-if __name__ == '__main__':
+if nicole_http == '__main__':
     app.run(debug=True)
